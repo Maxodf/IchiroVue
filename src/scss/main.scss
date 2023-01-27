@@ -1,0 +1,117 @@
+// Fondations
+@import './fondations/grid';
+@import './fondations/normalize';
+
+// Elements
+@import './elements/buttons';
+@import './elements/typography';
+
+
+
+
+
+
+
+
+//layout
+
+// @mixin ClashDisplay {
+//     font-family: "ClashDisplay-Regular";  
+// }
+
+body{
+    background-color: $colorTertiary;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+h1{
+    overflow: hidden;
+    font-family: $titleFontFamily;
+    font-size: $titleFontSize;
+    font-weight: $titleFontWeight;
+    text-align: center;
+    color: $colorPrimary;
+    // @media screen and (max-width: ($tablet - 1)){
+    //     font-size: px(80);
+    //     // color: blue;
+    // }  
+    @media screen and (max-width: ($mobile - 1)){
+        font-size: px(60);
+    }  
+}
+
+h2{
+    font-family: $titleFontFamily;
+    font-weight: $titleFontWeight;
+    font-size: px(50);
+    color: $colorPrimary;
+    margin-left: px(50);
+    margin-bottom: px(20);
+
+    @media screen and (max-width: ($mobile - 1)){
+        font-size: px(30);
+        text-align: center;
+        margin-left: px(0);
+    }  
+}
+
+p{
+    font-family: $textFontFamily;
+    font-size: $textFontSize;
+    line-height: px(30); 
+    color: $colorPrimary;
+    @media screen and (max-width: ($mobile - 1)){
+        font-size: $textFontSizeMobile;
+        line-height: px(20);
+    }  
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        color: $colorSecondary;
+    }
+}
+
+ul {
+    list-style-type: none;
+  }
+
+
+
+
+
+// .text-white{       
+//     font-family: $textFontFamily;
+//     font-size: $textFontSize;
+//     font-weight: 300;
+//     font-weight: $textFontWeight;
+//     line-height: px(30); 
+//     color: $colorTertiary;
+// }
+
+// .text-black{       
+//     font-family: $textFontFamily;
+//     font-size: $textFontSize;
+//     font-weight: 300;
+//     font-weight: $textFontWeight;
+//     line-height: px(30); 
+//     color: $colorPrimary;
+// }
+
+// .text{    
+//     &__variante{
+//         font-family: $textVarianteFontFamily;
+//         font-size: $textVarianteFontSize;
+//         line-height: px(40);
+
+//         @media screen and (max-width: ($mobile - 1)){
+//             font-size: $textVarianteFontSizeMobile;
+//             line-height: px(22);
+//         }  
+//     }
+// }

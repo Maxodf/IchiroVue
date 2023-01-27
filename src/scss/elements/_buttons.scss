@@ -1,0 +1,22 @@
+
+#button{
+    text-transform: uppercase;
+    font-family: $textFontFamily;
+    font-size: $textFontFamily;
+    color: $colorPrimary;
+    border: px(1) solid black;
+    padding: px(15);
+    padding-left: px(55);
+    padding-right: px(55);
+    border-radius: px(10);
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+   @media screen and (max-width: ($mobile - 1)){
+        border-radius: px(100);
+        font-size: $textFontSizeMobile;
+        padding: px(5);
+        padding-left: px(25);
+        padding-right: px(25);
+    } 
+}
