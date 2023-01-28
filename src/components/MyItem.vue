@@ -22,7 +22,6 @@ export default {
   @media screen and (max-width: ($mobile - 1)) {
      height: px(320);
      width: px(320);
-     border: 2px solid green;
      margin: auto;
   }
 
@@ -37,7 +36,6 @@ export default {
      height: px(320);
      width: px(320);
      background-color: #fff;
-     border: 2px solid rgb(255, 217, 4);
   }
   }
 

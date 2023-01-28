@@ -114,14 +114,14 @@ export default {
           .timeline({
             scrollTrigger: {
               trigger: ".describe",
-              start: "0% 100%",
-              end: "150% center",
+              start: "0% 90%",
+              end: "center 70%",
               markers: false,
               scrub: 1,
               pin: false,
             },
           })
-          .from(".describe", {});
+          .from(".describe", {x: 50,});
       } else {
         gsap
           .timeline({
@@ -146,12 +146,12 @@ export default {
               trigger: ".svg__1",
               start: "center 60%",
               end: "30% 30%",
-              markers: false,
+              markers:false,
               scrub: 1,
               pin: false,
             },
           })
-          .to(".svg__1", {});
+          .to(".svg__1", {rotate: 100});
       } else {
         gsap
           .timeline({
@@ -497,8 +497,8 @@ export default {
     // border: 1px solid blue;
   }
   @media screen and (max-width: ($mobile - 1)) {
-    width: px(190);
-    height: px(190);
+    width: px(230);
+    height: px(230);
     margin-top: px(450);
     left: 50%;
     transform: translateX(-50%);
@@ -521,8 +521,8 @@ export default {
   }
 
   @media screen and (max-width: ($mobile - 1)) {
-    width: px(210);
-    height: px(210);
+    width: px(250);
+    height: px(250);
     margin-top: px(362);
     rotate: 15deg;
     left: 50%;
@@ -616,6 +616,7 @@ i {
     font-size: px(25);
     line-height: px(25);
     margin-left: px(-50);
+    margin-top: px(50);
     width: 270px;
   }
 

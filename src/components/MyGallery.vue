@@ -124,9 +124,9 @@ export default {
             <label for="All">All</label>
           </li>
         </div>
-        <div class="col-4 on">
+        <div class="col-5 on">
           <p class="pon">
-            &nbsp;&nbsp;&nbsp;&nbsp;FORMULES ONGLES NATURELS &nbsp; &nbsp;
+            &nbsp;&nbsp;FORMULES ONGLES NATURELS &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp;
           </p>
           <li>
@@ -141,10 +141,8 @@ export default {
         </div>
         <div class="col-6 ec">
           <p class="pec">
-            &nbsp;&nbsp;&nbsp;&nbsp;FORMULES EXTENSIONS CHABLON &nbsp; &nbsp;
+            &nbsp;&nbsp;FORMULES EXTENSIONS CHABLON &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp;
           </p>
           <li>
             <label for="Humble">Humble</label>
@@ -304,10 +302,10 @@ li {
 }
 
 .pon {
-  font-size: px(16);
+  font-size: px(24);
 }
 .pec {
-  font-size: px(16);
+  font-size: px(24);
 }
 
 .gallery {
@@ -343,7 +341,7 @@ li {
     border: none;
     background: transparent;
     margin-left: px(30);
-    font-size: px(18);
+    font-size: px(20);
     font-weight: 500;
   }
   }
@@ -378,6 +376,7 @@ li {
   line-height: normal;
   cursor: pointer;
   transition: all 0.1s;
+  font-size: px(24);
 }
 
 .filters label:hover {
@@ -387,7 +386,7 @@ li {
 label {
   color: $colorSecondary;
   font-family: $textFontFamily;
-  font-size: $textFontSize;
+  font-size: px(20);
   font-weight: 600;
 
   @media screen and (max-width: ($mobile - 1)) {
@@ -416,7 +415,6 @@ label {
     // display: grid;
     grid-template-columns: repeat(1, 1fr) !important;
     // max-width: 100%;
-    border: 2px solid rgb(255, 0, 0);
     display: block;
     padding: 0;
     // grid-gap: px(10);
@@ -429,7 +427,6 @@ label {
 .post{
   @media screen and (max-width: ($mobile - 1)) {
     // margin-bottom: px(50);
-    border: 10px solid blue;
     margin-bottom: px(10);
   }
 }

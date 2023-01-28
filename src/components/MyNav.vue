@@ -295,7 +295,7 @@ beforeUnmount() {
     text-decoration: none;
     font-size: px(50);
     font-family: $textFontFamily;
-    font-size: $textFontSize;
+    font-size: px(24);
     margin-left: px(30);
     font-weight: 700;
     // border-bottom: 1px solid $colorPrimary;
