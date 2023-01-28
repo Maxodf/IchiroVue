@@ -318,7 +318,7 @@ export default {
           <img
             ref="img__1"
             class="img__home"
-            src="./../assets/img/IMG_2963.jpg"
+            src="./../assets/img/gallery/resize.png"
             alt=""
           />
         </transition>
@@ -358,8 +358,8 @@ export default {
           <div class="col-2"></div>
           <div class="col-6">
             <p class="describe">
-              Prothésiste ongulaire <br />
-              et Nail artiste certifiée, <br />
+              Prothésiste Ongulaire <br />
+              et Nail Artiste certifiée, <br />
               inspirée par l'art et la tendance
             </p>
           </div>
