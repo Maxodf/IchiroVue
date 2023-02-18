@@ -22,6 +22,7 @@
 body{
     background-color: $colorTertiary;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 // ::-webkit-scrollbar{

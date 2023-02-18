@@ -114,6 +114,11 @@ export default {
         padding-left: px(30);
         padding-right: px(30);
         z-index: 1;
+
+    //     @media screen and (max-width: ($mobile - 1)){
+    //     font-size: px(16);
+    // }  
+
       }
 
         &:hover{

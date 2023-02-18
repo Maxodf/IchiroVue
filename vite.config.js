@@ -12,6 +12,17 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vue: ['vue'],
+          lodash: ['lodash']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000 * 1000
+  },
   css: {
     preprocessorOptions: {
       scss: {

@@ -8,6 +8,13 @@ export default {
     MyItem,
   },
 
+  props: {
+    images: {
+      type: Array,
+      required: true
+    }
+  },
+
   data() {
     return {
       showMenu: false,
@@ -45,6 +52,7 @@ export default {
     }
   });
 }
+
 
 };
 </script>
@@ -159,93 +167,15 @@ export default {
         </div>
       </ol>
 
-      <ol class="posts">
-        <li class="post" data-category="Audacieuse">
-          <MyItem
-            linkImg="/src/assets/img/gallery/7F6F3CF0-A005-4C88-8B29-918ABA675BED.jpg"
-          ></MyItem>
-        </li>
-        <li class="post" data-category="Intrépide">
-          <MyItem
-            linkImg="/src/assets/img/gallery/132D9631-A86A-4EDC-BEDE-BD6C3C85761F.jpg"
-          ></MyItem>
-        </li>
-        <li class="post" data-category="Modeste">
-          <MyItem
-            linkImg="/src/assets/img/gallery/48920AD1-454B-487E-AEA3-B16B5CD13708.jpg"
-          ></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem
-            linkImg="/src/assets/img/gallery/6F0C32B8-5FB8-490D-BAC0-2B604F266AD9.jpg"
-          ></MyItem>
-        </li>
-        <li class="post" data-category="Modeste">
-          <MyItem
-            linkImg="/src/assets/img/gallery/7ED3BDFD-BB15-4072-B02D-6ED485DEECB1.jpg"
-          ></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem
-            linkImg="/src/assets/img/gallery/D977B44E-F991-4B23-9F84-529DB5EFF0F1.jpg"
-          ></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem
-            linkImg="/src/assets/img/gallery/F7400826-67B3-4A32-ABFD-04AB0E66DAF5.jpg"
-          ></MyItem>
-        </li>
-        <li class="post" data-category="Exigeante">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1436.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1437.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Exigeante">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1438.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Intrépide">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1440.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1441.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Intrépide">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1442.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Intrépide">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1443.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1445.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1447.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Intrépide">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1448.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Intrépide">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1449.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Exigeante">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1450.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Exigeante">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1451.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Exigeante">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1452.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_1454.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Humble">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_2718.PNG"></MyItem>
-        </li>
-        <li class="post" data-category="Prétentieuse">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_2720.PNG"></MyItem>
-        </li>
+
+  <ol class="posts">
+    <li class="post" v-for="image in images" :key="image.src" :data-category="image.category">
+      <MyItem :linkImg="image.src"></MyItem>
+    </li>
+  </ol>
+
+      <!-- 
+
         <li class="post" data-category="Limpide">
           <MyItem linkImg="/src/assets/img/gallery/IMG_2722.PNG"></MyItem>
         </li>
@@ -261,14 +191,12 @@ export default {
         <li class="post" data-category="Humble">
           <MyItem linkImg="/src/assets/img/gallery/IMG_2717.PNG"></MyItem>
         </li>
-        <!-- <li class="post" data-category="Prétentieuse">
-          <MyItem linkImg="/src/assets/img/gallery/IMG_2729.PNG"></MyItem>
-        </li> -->
-      </ol>
+      </ol> 
+    -->
     </div>
 
     <div>
-    <div>
+    <!-- <div>
       <img 
       v-for="image in images" 
       :src="image" 
@@ -276,7 +204,7 @@ export default {
       @click="isExpanded = !isExpanded"
       alt="Gallery Image" 
       />
-    </div>
+    </div> -->
     <div v-if="selectedImage">
       <img :src="selectedImage" alt="Selected Image" />
       <button @click="selectedImage = null; isExpanded = false">Close</button>
@@ -303,9 +231,11 @@ li {
 
 .pon {
   font-size: px(24);
+  margin-bottom: px(10);
 }
 .pec {
   font-size: px(24);
+  margin-bottom: px(10);
 }
 
 .gallery {
@@ -376,7 +306,7 @@ li {
   line-height: normal;
   cursor: pointer;
   transition: all 0.1s;
-  font-size: px(24);
+  font-size: px(23);
 }
 
 .filters label:hover {

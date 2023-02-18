@@ -64,6 +64,7 @@ export default {
       if (Math.abs(window.pageYOffset - this.lastScrollPosition) < this.scrollOffset) {
         return
       }
+      
       this.showHeader = window.pageYOffset < this.lastScrollPosition
       this.lastScrollPosition = window.pageYOffset
     },
@@ -97,12 +98,14 @@ export default {
     },0)
     .reverse();
 
-    this.lastScrollPosition = window.pageYOffset
-    window.addEventListener('scroll', this.onScroll)
+    if (window.matchMedia("(min-width: 400px)").matches) {
+    this.lastScrollPosition = window.pageYOffset;
+    window.addEventListener("scroll", this.onScroll);
+  }
 },
 
 beforeUnmount() {
-    window.removeEventListener('scroll', this.onScroll)
+    window.removeEventListener('scroll', this.onScroll);
   },
 
 
@@ -154,7 +157,7 @@ beforeUnmount() {
       <a href="/">
         <img
           class="logo-nav"
-          src="./../../src/assets/img/ichiro officiel.png"
+          src="./../../src/assets/img/ichiroOfficiel.png"
           alt=""
         />
       </a>
@@ -275,7 +278,11 @@ beforeUnmount() {
   transform: translateY(-100%);
 }
 
-
+.footer{
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
+}
 .menu-desktop {
   position: absolute;
   margin-left: 5%;

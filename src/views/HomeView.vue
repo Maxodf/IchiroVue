@@ -247,7 +247,7 @@ export default {
 </script>
 
 <template>
-  <DefaultLayout>
+  <DefaultLayout class="view">
     <template #header>
       <MyNav />
 
@@ -307,7 +307,7 @@ export default {
           >
             art.
           </span>
-        </h1>
+        </h1> -->
 
         <transition
           appear
@@ -403,6 +403,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+
+.view{
+@media screen and (max-width: ($mobile - 1)){
+  overflow-x: hidden;
+  }  
+}
+
 .loc {
   position: relative;
 }
