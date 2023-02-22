@@ -13,8 +13,8 @@ export default {
 
     <div class="footer">
 
-        <a href=""> Mentions légales</a>
-        <a href="/"> Ichiro - 2022</a>
+        <router-link to="/"> Mentions légales</router-link>
+        <router-link to="/"> Ichiro - 2022</router-link>
     </div>
 
 

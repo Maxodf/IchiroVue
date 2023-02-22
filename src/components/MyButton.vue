@@ -14,7 +14,7 @@ export default {
 
   <div v-motion-pop-visible class="btn-contain">
     <div class="btn">
-      <a v-if="link" :href="link" class="button">{{ text }}</a>
+      <router-link v-if="link" :to="link" class="button">{{ text }}</router-link>
       <button v-else class="button">{{ text }} </button>
       <svg class="wavyHover" xmlns="http://www.w3.org/2000/svg" width="300" height="90" viewBox="0 0 138.4 9.8">
         <path id="Tracé_3" data-name="Tracé 3" d="M518.376,628.8s3.657-8.8,15.034-8.8,12.7,8.8,23.363,8.8S568.15,620,579.12,620s10.513,8.8,21.535,8.8,11.072-8.8,20.316-8.8,7.908,8.8,16.659,8.8,18.347-8.8,18.347-8.8" transform="translate(-517.915 -619.5)" fill="none" stroke="#ffaebf" stroke-width="0.5"/>

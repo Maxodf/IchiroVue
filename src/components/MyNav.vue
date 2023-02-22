@@ -136,31 +136,30 @@ beforeUnmount() {
       <div @click="openInstagramInNewTab" class="icon-nav">
         <fa class="icon-nav__instagram" :icon="['fab', 'instagram']" />
       </div>
-      <div class="menu-desktop">
-        <ul ref="menuNav" class="menu-desktop__list">
-          <li
-            class="menu-desktop__list__li"
-            v-for="(item, index) in items"
-            @click="handleClick(index)"
-            :key="item.id"
+    <div class="menu-desktop">
+      <ul ref="menuNav" class="menu-desktop__list">
+        <li
+          class="menu-desktop__list__li"
+          v-for="(item, index) in items"
+          @click="handleClick(index)"
+          :key="item.id"
+        >
+          <router-link
+            :class="['menu-desktop__link', { '-active': index === selectedIndex }]"
+            :to="item.link"
+            exact-active-class="-active"
+            >{{ item.label }}</router-link
           >
-            <a
-              :class="`menu-desktop__link ${
-                index === selectedIndex ? '-active' : ''
-              }`"
-              :href="item.link"
-              >{{ item.label }}</a
-            >
-          </li>
-        </ul>
-      </div>
-      <a href="/">
-        <img
-          class="logo-nav"
-          src="./../../src/assets/img/ichiroOfficiel.png"
-          alt=""
-        />
-      </a>
+        </li>
+      </ul>
+    </div>
+    <router-link to="/">
+      <img
+        class="logo-nav"
+        src="./../../src/assets/img/ichiroOfficiel.png"
+        alt=""
+      />
+    </router-link>
       <div v-on:click="click" ref="burger" class="icon-burger">
         <svg
           class="icon-burger__arrow"
@@ -191,10 +190,10 @@ beforeUnmount() {
           @click="handleClick(index)"
           :key="item.id"
         >
-          <a
+          <router-link
             :class="`menu__link ${index === selectedIndex ? '-active' : ''}`"
-            :href="item.link"
-            >{{ item.label }}</a
+            :to="item.link"
+            >{{ item.label }}</router-link
           >
         </li>
       </ul>
